@@ -1,0 +1,26 @@
+[package]
+name = "s32k-quickstart"
+version = "0.1.0"
+authors = ["p3zhy <pejman.ghd@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+panic-halt = "0.2.0"
+cortex-m-rt = "0.6.7"
+s32k144 = "0.10.0"
+embedded_types = "0.3.2"
+
+[dependencies.cortex-m]
+version = "0.5.0"
+
+[dependencies.s32k144evb]
+version = "0.7.0"
+default-features = false
+
+[dependencies.cortex-m-rtfm]
+version = "0.4.2"
+features = ["timer-queue"]
+
+[patch.crates-io]
+s32k144evb = { git = "https://gitlab.com/rust-daredevil-group/mirrors/s32k144evb", branch = "daredevil" }
+s32k144 = { git = "https://gitlab.com/rust-daredevil-group/mirrors/s32k144", branch = "master" }

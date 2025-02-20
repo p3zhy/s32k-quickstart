@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Cortex Debug",
+        "type": "cortex-debug",
+        "request": "launch",
+        "servertype": "jlink",  
+        "device": "S32K144",     
+        "interface": "jtag",    
+        "executable": "./target/thumbv7em-none-eabihf/debug/s32k-quickstart", 
+        // "gdbPath": "/usr/local/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",   
+        "runToEntryPoint": "true",       
+        "svdFile": "./S32K144.svd",
+        "preLaunchTask": "cargo build"  
+      }
+    ]
+  }
+  
